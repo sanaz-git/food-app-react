@@ -15,11 +15,11 @@ const cartReducer = (state, action) => {
           ...action.payload,
           quantity: 1,
         });
-        return {
-          ...state,
-          selectedItems: [...state.selectedItems],
-        };
       }
+      return {
+        ...state,
+        selectedItems: [...state.selectedItems],
+      };
 
     case 'REMOVE_ITEM':
       const newSelectedItems = state.selectedItems.filter(

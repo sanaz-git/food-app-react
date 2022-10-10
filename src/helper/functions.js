@@ -1,0 +1,1 @@
+const isInCart = (state, id) => {};

@@ -2,6 +2,7 @@ import './App.css';
 
 //Context
 import ProductContextProvider from './context/ProductContextProvider';
+import CartContextProvider from './context/CartContextProvider';
 
 //Components
 import Store from './components/Store';
@@ -10,7 +11,9 @@ function App() {
   return (
     <div className="App">
       <ProductContextProvider>
-        <Store />
+        <CartContextProvider>
+          <Store />
+        </CartContextProvider>
       </ProductContextProvider>
     </div>
   );

@@ -18,23 +18,23 @@ const ShopCart = () => {
       {state.itemsCounter > 0 && (
         <div>
           <p>
+            <span>Total Items:</span> {state.itemsCounter}
+          </p>
+          <p>
             <span>Total Payments:</span> {state.total}
           </p>
           <div>
             <button onClick={() => dispatch({ type: 'CHECKOUT' })}>
-              Order
+              Check Out
             </button>
-            <button onClick={() => dispatch({ type: 'CLEAR' })}>
-              Close-clear
-            </button>
+            <button onClick={() => dispatch({ type: 'CLEAR' })}>Clear</button>
           </div>
         </div>
       )}
+
       {state.checkout && (
         <div>
-          <input type="string" />
-          <input type="string" />
-          <Link to="/Order">Confirm</Link>
+          <Link to="/products">order</Link>
         </div>
       )}
 

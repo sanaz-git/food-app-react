@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 //Context
 import { CartContext } from '../../context/CartContextProvider';
@@ -11,9 +12,11 @@ const Navbar = () => {
   return (
     <div>
       <div>
-        <a>product</a>
+        <Link to="/products">products</Link>
         <div>
-          <img src={shop} alt="shop" />
+          <Link to="/cart">
+            <img src={shop} alt="shop" />
+          </Link>
           <span>{state.itemsCounter}</span>
         </div>
       </div>

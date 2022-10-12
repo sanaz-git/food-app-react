@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 
+// Functions
+import { isInCart, quantityCount } from '../../helper/functions';
+
 //Context
 import { CartContext } from '../../context/CartContextProvider';
-
-//Functions
-import { isInCart, quantityCount } from '../../helper/functions';
 
 const Product = ({ productData }) => {
   const { state, dispatch } = useContext(CartContext);
@@ -16,10 +16,6 @@ const Product = ({ productData }) => {
         <p>$ {productData.price}</p>
       </div>
       <div>
-        <span>Amount</span>
-        <input type="number" />
-        {/* <button>+ Add</button> */}
-
         {quantityCount(state, productData.id) > 1 && (
           <button
             onClick={() => dispatch({ type: 'DECREASE', payload: productData })}
@@ -37,12 +33,8 @@ const Product = ({ productData }) => {
           </button>
         )}
 
-        {/* Cart Counter */}
         {quantityCount(state, productData.id) > 0 && (
-          <span>
-            {quantityCount(state, productData.id)}
-            <input type="number" />
-          </span>
+          <span>{quantityCount(state, productData.id)}</span>
         )}
 
         {isInCart(state, productData.id) ? (
@@ -55,7 +47,7 @@ const Product = ({ productData }) => {
           <button
             onClick={() => dispatch({ type: 'ADD_ITEM', payload: productData })}
           >
-            +ADD
+            Add to Cart
           </button>
         )}
       </div>

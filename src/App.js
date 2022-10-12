@@ -1,9 +1,11 @@
 import './App.css';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 //Context
 import ProductContextProvider from './context/ProductContextProvider';
 import CartContextProvider from './context/CartContextProvider';
 import Navbar from './components/shared/Navbar';
+import ShopCart from './components/ShopCart';
 
 //Components
 import Store from './components/Store';
@@ -14,7 +16,11 @@ function App() {
       <ProductContextProvider>
         <CartContextProvider>
           <Navbar />
-          <Store />
+          <Switch>
+            <Route path="/products" component={Store} />
+            <Route path="/cart" component={ShopCart} />
+            <Redirect to="/products" />
+          </Switch>
         </CartContextProvider>
       </ProductContextProvider>
     </div>

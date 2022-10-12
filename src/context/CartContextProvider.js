@@ -7,17 +7,17 @@ const initialState = {
   checkout: false,
 };
 
-const sumItems = (items) => {
-  const itemsCounter = items.reduce(
-    (total, product) => total + product.quantity,
-    0,
-  );
-  const total = items
-    .reduce((total, product) => total + product.price * product.quantity, 0)
-    .toFixed(2);
+// const sumItems = (items) => {
+//   const itemsCounter = items.reduce(
+//     (total, product) => total + product.quantity,
+//     0,
+//   );
+//   const total = items
+//     .reduce((total, product) => total + product.price * product.quantity, 0)
+//     .toFixed(2);
 
-  return { itemsCounter: itemsCounter, total: total };
-};
+//   return { itemsCounter: itemsCounter, total: total };
+// };
 
 const cartReducer = (state, action) => {
   console.log(state);
@@ -32,7 +32,7 @@ const cartReducer = (state, action) => {
       return {
         ...state,
         selectedItems: [...state.selectedItems],
-        ...sumItems(state.selectedItems),
+        // ...sumItems(state.selectedItems),
         checkout: false,
       };
 
@@ -44,7 +44,7 @@ const cartReducer = (state, action) => {
       return {
         ...state,
         selectedItems: [...newSelectedItems],
-        ...sumItems(newSelectedItems),
+        // ...sumItems(newSelectedItems),
       };
 
     case 'INCREASE':
@@ -54,7 +54,7 @@ const cartReducer = (state, action) => {
       state.selectedItems[indexI].quantity++;
       return {
         ...state,
-        ...sumItems(state.selectedItems),
+        // ...sumItems(state.selectedItems),
       };
     case 'DECREASE':
       const indexD = state.selectedItems.findIndex(
@@ -63,7 +63,7 @@ const cartReducer = (state, action) => {
       state.selectedItems[indexD].quantity--;
       return {
         ...state,
-        ...sumItems(state.selectedItems),
+        // ...sumItems(state.selectedItems),
       };
 
     case 'CHECKOUT':
@@ -93,7 +93,7 @@ const CardContextProvider = ({ children }) => {
 
   return (
     <div>
-      <CartContext.Provider value={{ state: state, dispatch: dispatch }}>
+      <CartContext.Provider value={{ state, dispatch }}>
         {children}
       </CartContext.Provider>
     </div>

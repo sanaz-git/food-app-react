@@ -4,7 +4,7 @@ import React, { useContext } from 'react';
 import { CartContext } from '../../context/CartContextProvider';
 
 const Cart = (props) => {
-  const { state, dispatch } = useContext(CartContext);
+  const { dispatch } = useContext(CartContext);
   const { title, price, quantity } = props.data;
 
   return (
@@ -12,7 +12,7 @@ const Cart = (props) => {
       <div>
         <h3>{title}</h3>
         <p>{price}$</p>
-        <span>{quantity}</span>
+        <span>X {quantity}</span>
       </div>
       <div>
         {quantity > 1 ? (

@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import ReactDom from 'react-dom';
 
 //Components
 import Cart from './shared/Cart';
@@ -10,7 +11,7 @@ import { CartContext } from '../context/CartContextProvider';
 const ShopCart = () => {
   const { state, dispatch } = useContext(CartContext);
 
-  return (
+  return ReactDom.createPortal(
     <div>
       {state.selectedItems.map((item) => (
         <Cart key={item.id} data={item} />
@@ -32,7 +33,8 @@ const ShopCart = () => {
           </div>
         </div>
       )}
-    </div>
+    </div>,
+    document.getElementById('child-root'),
   );
 };
 

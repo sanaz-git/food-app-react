@@ -5,19 +5,26 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContextProvider';
 
 //Icons
-import shop from '../../assets/icons/shop.svg';
+
+import { TiShoppingCart } from 'react-icons/ti';
+
+//styles
+import styles from '../shared/Navbar.module.css';
 
 const Navbar = () => {
   const { state } = useContext(CartContext);
   return (
-    <div>
-      <div>
-        <Link to="/products">products</Link>
-        <div>
+    <div className={styles.container}>
+      <div className={styles.navbar}>
+        <Link className={styles.productLink} to="/products">
+          ReactMeals
+        </Link>
+        <div className={styles.shop}>
           <Link to="/cart">
-            <img src={shop} alt="shop" />
+            <TiShoppingCart style={{ fontSize: '25px', color: '#fff' }} />
           </Link>
-          <span>{state.itemsCounter}</span>
+          <p>Your Card</p>
+          <span> {state.itemsCounter}</span>
         </div>
       </div>
     </div>

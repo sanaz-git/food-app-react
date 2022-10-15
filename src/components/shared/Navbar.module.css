@@ -1,0 +1,49 @@
+.container {
+  background-color: #681801;
+  margin: 0 0 100px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding: 15px 180px;
+}
+
+.productLink {
+  color: #fff;
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0 1px;
+  transition: all 0.2s ease;
+}
+
+.shop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 30px;
+  background-color: #330b01;
+  width: 200px;
+  font-size: 14px;
+  height: 40px;
+}
+
+.shop p {
+  padding: 0 10px 0 10px;
+}
+
+.shop span {
+  border: none;
+  background-color: #681801;
+  border-radius: 10px;
+  padding: 2px 10px;
+  width: fit-content;
+}

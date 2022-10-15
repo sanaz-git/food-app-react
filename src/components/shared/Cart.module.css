@@ -1,0 +1,122 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  background-color: #f1f2f4;
+  border-radius: 10px 10px 0 0;
+  margin-top: 100px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 10px;
+  border-bottom: 2px solid #681801;
+}
+
+.productContainer {
+  font-size: 1.17rem;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.productContainer p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #681801;
+}
+
+.productContainer p span {
+  border: 1px solid silver;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 20px;
+  color: black;
+}
+
+.smallButton {
+  /* background-color: #681801; */
+  color: #681801;
+  border: 5px;
+  padding: 4px 3px 3px;
+  margin: 2px;
+  width: 25px;
+  border: 1px solid #681801;
+  border-radius: 5px;
+  font-size: 20px;
+  display: inline;
+  width: 28px;
+  cursor: pointer;
+}
+
+.deleteButton {
+  font-size: 19px;
+  padding-top: 5px;
+  border: 1px solid #681801;
+  border-radius: 5px;
+  color: #681801;
+  cursor: pointer;
+  padding: 3px;
+  width: 28px;
+  cursor: pointer;
+}
+
+.mount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  flex-direction: column;
+}
+.amountContainer {
+  font-size: 1.17rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* .buttonContainer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: flex-end;
+}
+
+.orderButton {
+  margin-left: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #681801;
+  padding: 5px;
+  width: 60px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.orderButton:hover {
+  border: 1px solid #681801;
+  background-color: #f1f2f4;
+  color: #681801;
+}
+
+.closeButton {
+  margin-left: 250px;
+  border: 1px solid #681801;
+  border-radius: 10px;
+  background-color: #f1f2f4;
+  padding: 5px;
+  width: 60px;
+  color: #681801;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background-color: #681801;
+  color: #fff;
+} */

@@ -10,7 +10,7 @@ import Store from './components/Store';
 import Navbar from './components/shared/Navbar';
 import ShopCart from './components/ShopCart';
 import Order from './components/Order';
-import Confirm from './components/shared/Confirm';
+import Confirm from './components/Confirm';
 
 function App() {
   return (

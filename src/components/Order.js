@@ -8,33 +8,45 @@ import Cart from './shared/Cart';
 //Context
 import { CartContext } from '../context/CartContextProvider';
 
+//styles
+import styles from '../components/Order.module.css';
+
 const Order = () => {
   const { state, dispatch } = useContext(CartContext);
   return ReactDom.createPortal(
-    <div>
+    <div className={styles.mainContainer}>
       {state.selectedItems.map((item) => (
         <Cart key={item.id} data={item} />
       ))}
 
-      <>
-        <div>
-          <input />
+      <div className={styles.orderContainer}>
+        <div className={styles.indexContainer}>
+          <label>Name:</label>
+          <input type="text" />
+
+          <label>Address:</label>
+          <input type="text" />
         </div>
-        <div>
-          <input />
-        </div>
-        <div>
+        <div className={styles.buttonContainer}>
           <Link to="/products">
-            <button onClick={() => dispatch({ type: 'CLEAR' })}>cancel</button>
+            <button
+              className={styles.cancelButton}
+              onClick={() => dispatch({ type: 'CLEAR' })}
+            >
+              cancel
+            </button>
           </Link>
 
           <Link to="/confirm">
-            <button onClick={() => dispatch({ type: 'CHECKOUT' })}>
+            <button
+              className={styles.confirmButton}
+              onClick={() => dispatch({ type: 'CHECKOUT' })}
+            >
               Confirm
             </button>
           </Link>
         </div>
-      </>
+      </div>
     </div>,
     document.getElementById('child-root'),
   );

@@ -1,0 +1,66 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  background-color: #f1f2f4;
+  border: none;
+  border-radius: 0 0 10px 10px;
+}
+
+.orderContainer {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.indexContainer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 220px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.indexContainer label {
+  margin-top: 10px;
+}
+
+.buttonContainer {
+  margin-top: 20px;
+  margin-left: 280px;
+}
+
+.confirmButton {
+  margin-left: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #681801;
+  padding: 5px;
+  width: 60px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.confirmButton:hover {
+  border: 1px solid #681801;
+  background-color: #f1f2f4;
+  color: #681801;
+}
+
+.cancelButton {
+  border: 1px solid #681801;
+  border-radius: 10px;
+  background-color: #f1f2f4;
+  padding: 5px;
+  width: 60px;
+  color: #681801;
+  cursor: pointer;
+}
+
+.cancelButton:hover {
+  background-color: #681801;
+  color: #fff;
+}

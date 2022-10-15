@@ -1,0 +1,75 @@
+.container {
+  margin-left: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  background-color: #f1f2f4;
+  border-radius: 0 0 10px 10px;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  background-color: #f1f2f4;
+  border-radius: 0 0 10px 10px;
+}
+
+.mount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  flex-direction: column;
+}
+.amountContainer {
+  font-size: 1.17rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.buttonContainer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: flex-end;
+}
+
+.orderButton {
+  margin-left: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #681801;
+  padding: 5px;
+  width: 60px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.orderButton:hover {
+  border: 1px solid #681801;
+  background-color: #f1f2f4;
+  color: #681801;
+}
+
+.closeButton {
+  margin-left: 250px;
+  border: 1px solid #681801;
+  border-radius: 10px;
+  background-color: #f1f2f4;
+  padding: 5px;
+  width: 60px;
+  color: #681801;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background-color: #681801;
+  color: #fff;
+}

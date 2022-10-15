@@ -9,11 +9,15 @@ import { ProductContext } from '../context/ProductContextProvider';
 //styles
 import styles from './Store.module.css';
 
+//images
+import wall from '../assets/images/hero.jpg';
+
 const Store = () => {
   const products = useContext(ProductContext);
   return (
-    <div>
+    <div className={styles.mainContainer}>
       <div className={styles.container}>
+        <img src={wall} alt="background" />
         <div className={styles.description}>
           <h2>Delicious Food, Delivered To You</h2>
           <p>

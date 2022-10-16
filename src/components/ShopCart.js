@@ -1,8 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
-import ReactDom from 'react-dom';
-
 //Components
 import Cart from './shared/Cart';
 
@@ -15,8 +13,8 @@ import styles from '../components/ShopCart.module.css';
 const ShopCart = () => {
   const { state } = useContext(CartContext);
 
-  return ReactDom.createPortal(
-    <div className={styles.mainContainer}>
+  return (
+    <div className={styles.container}>
       <div>
         {state.selectedItems.map((item) => (
           <Cart key={item.id} data={item} />
@@ -31,8 +29,7 @@ const ShopCart = () => {
           <button className={styles.orderButton}>order</button>
         </Link>
       </div>
-    </div>,
-    document.getElementById('child-root'),
+    </div>
   );
 };
 

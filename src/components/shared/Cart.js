@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import ReactDom from 'react-dom';
 
 //Context
 import { CartContext } from '../../context/CartContextProvider';
@@ -14,7 +13,7 @@ const Cart = (props) => {
   const { state, dispatch } = useContext(CartContext);
   const { title, price, quantity } = props.data;
 
-  return ReactDom.createPortal(
+  return (
     <div className={styles.mainContainer}>
       <div className={styles.container}>
         <div className={styles.productContainer}>
@@ -61,8 +60,7 @@ const Cart = (props) => {
           </div>
         </div>
       )}
-    </div>,
-    document.getElementById('child-root'),
+    </div>
   );
 };
 

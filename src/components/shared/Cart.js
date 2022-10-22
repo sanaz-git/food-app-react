@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-
+import { Link } from 'react-router-dom';
 //Context
 import { CartContext } from '../../context/CartContextProvider';
 
@@ -51,15 +51,6 @@ const Cart = (props) => {
           </button>
         </div>
       </div>
-
-      {state.itemsCounter > 0 && (
-        <div className={styles.mount}>
-          <div className={styles.amountContainer}>
-            <div>Total Amount</div>
-            <div> ${state.total}</div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

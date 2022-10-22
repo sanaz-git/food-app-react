@@ -63,21 +63,3 @@
   width: 28px;
   cursor: pointer;
 }
-
-.mount {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 80%;
-  flex-direction: column;
-}
-.amountContainer {
-  font-size: 1.17rem;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}

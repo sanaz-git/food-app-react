@@ -11,7 +11,7 @@ import { CartContext } from '../context/CartContextProvider';
 import styles from '../components/ShopCart.module.css';
 
 const ShopCart = () => {
-  const { state } = useContext(CartContext);
+  const { state, dispatch } = useContext(CartContext);
 
   return (
     <div className={styles.container}>
@@ -21,12 +21,43 @@ const ShopCart = () => {
         ))}
       </div>
 
-      <div className={styles.buttonContainer}>
+      <div
+        className={
+          state.itemsCounter === 0
+            ? styles.hideButtonContainer
+            : styles.buttonContainer
+        }
+      >
+        {state.itemsCounter > 0 && (
+          <div className={styles.mount}>
+            <div className={styles.amountContainer}>
+              <div>Total Amount</div>
+              <div> ${state.total}</div>
+            </div>
+          </div>
+        )}
+
         <Link to="/products">
-          <button className={styles.closeButton}>close</button>
+          <button
+            className={
+              state.itemsCounter === 0
+                ? styles.hideCloseButton
+                : styles.closeButton
+            }
+          >
+            close
+          </button>
         </Link>
         <Link to="/order">
-          <button className={styles.orderButton}>order</button>
+          <button
+            className={
+              state.itemsCounter === 0
+                ? styles.hideOrderButton
+                : styles.orderButton
+            }
+          >
+            order
+          </button>
         </Link>
       </div>
     </div>
